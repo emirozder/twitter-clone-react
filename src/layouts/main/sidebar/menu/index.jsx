@@ -1,13 +1,20 @@
 import classNames from "classnames";
 import { NavLink } from "react-router-dom";
+import { useCurrentAccount } from "../../../../store/auth/hooks";
 import { MENU } from "../../../../utils/consts";
 import More from "../more";
 
 export default function Menu() {
+  const currentAccount = useCurrentAccount();
+
   return (
-    <nav className="mt-0.5 mb-1">
+    <nav className="mt-0.5 mb-1" key={currentAccount?.id}>
       {MENU.map((item, index) => (
-        <NavLink key={index} to={item?.path} className="py-1 block group">
+        <NavLink
+          key={index}
+          to={typeof item?.path === "function" ? item?.path() : item?.path}
+          className="py-1 block group"
+        >
           {({ isActive }) => (
             <div
               className={classNames(
