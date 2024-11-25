@@ -1,5 +1,6 @@
 import Logo from "./logo";
 import Menu from "./menu";
+import SendButton from "./SendButton";
 
 export default function Sidebar() {
   return (
@@ -7,6 +8,7 @@ export default function Sidebar() {
       <div className="w-[275px] min-h-screen px-2">
         <Logo />
         <Menu />
+        <SendButton />
       </div>
     </aside>
   );
