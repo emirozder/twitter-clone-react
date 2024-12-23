@@ -338,3 +338,37 @@ export const MORE_MENU = [
     ),
   },
 ];
+
+export const topics = [
+  {
+    header: "Gündemdekiler",
+    title: {
+      type: "text",
+      value: "Topic 0",
+    },
+  },
+  {
+    header: "Gündemdekiler",
+    title: {
+      type: "text",
+      value: "Topic 1",
+    },
+    postCount: 2705,
+  },
+  {
+    header: "Türkiye tarihinde gündemde",
+    title: {
+      type: "tag",
+      value: "topic2",
+    },
+    postCount: 3585,
+  },
+  {
+    header: "Spor · Gündemdekiler",
+    title: {
+      type: "tag",
+      value: "topic3",
+    },
+    postCount: 10179,
+  },
+];
